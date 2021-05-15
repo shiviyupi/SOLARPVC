@@ -1,0 +1,9 @@
+:host ::ng-deep .track circle{
+  stroke-opacity: 3 !important;
+
+}
+.twitter-like{}
+  .mat-progress-spinner{
+      padding-top: 500px;
+      position:center;
+  }

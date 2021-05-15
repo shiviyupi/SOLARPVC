@@ -1,0 +1,66 @@
+<div class="container-fluid">
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+
+    <a class="navbar-brand" href="#"><strong> HELIWARE</strong></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page"  (click)="new()" routerLink="objfile">OBJECT FILE</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="gltf">GLTF FILE</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="threed">SOLAR PANEL</a>
+        </li>
+ <li class="nav-item active">
+          <a class="nav-link" routerLink="solarpanel"> 3 DIMENSIONAL  </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="heli">  Heli 3D  </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="osm">  OSM  </a>
+        </li>
+
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> &nbsp;&nbsp;&nbsp;
+        <button class="btn btn-outline-danger" type="submit">Search</button>
+      </form>
+    </div>
+
+</nav>
+</div>
+  <!--<ul>
+<li>  <h2>  <a  (click)="new()" routerLink="objfile">
+
+   OBJECT FILE </a>
+  </h2>
+</li>
+<li>    <h2> <a routerLink="spinnerfile" > Spinner File</a> </h2></li>
+</ul>-->
+
+
+<div class="twitter-like">
+  <mat-progress-spinner class="track"  style="margin:0 auto;" mode="indeterminate" *ngIf="isload"> </mat-progress-spinner>
+
+<p  *ngIf ="loadPercentage && isload" style="position:absolute;top:30%;left:30%;font-size: 20px;z-index:10000">{{ loadPercentage }} % </p>
+</div>
+
+
+
+
+<div *ngIf="loadObject">
+
+
+
+  <app-obj></app-obj></div>
+
+<router-outlet> </router-outlet>
+
+
+
